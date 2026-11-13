@@ -27,6 +27,12 @@ You are working on **Runway** (see README.md). Yaaf owns it; you propose, he app
    - open a PR whose title includes the issue ID
 4. Never mark a lab ✅ without a working proof.
 
+## Cloud sessions
+- The Cloud-Project environment runs `tools/cloud-setup.sh` (pinned, SHA256-checked tools). Bump a version and its hash together, then paste the file into the environment's setup script.
+- Docker doesn't start on its own. Run `dockerd &` first.
+- Open PRs with `gh api repos/yaaf-some/cloud-project/pulls`. `gh pr` uses GraphQL, which the proxy blocks.
+- Never print or echo token variables.
+
 ## Knowledge-base rules (no wiki sprawl)
 - Lab knowledge goes in the lab's README. `kb/` is only for what spans several labs, with at most 8 files and 250 lines each.
 - Never create session, meeting or status notes in the repo. Those belong in Linear and the PR.
