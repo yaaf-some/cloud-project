@@ -1,0 +1,11 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "kb/attachments",
+  "userIgnoreFilters": [
+    ".git/",
+    "node_modules/",
+    ".terraform/"
+  ],
+  "showFrontmatter": true
+}

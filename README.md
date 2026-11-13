@@ -53,8 +53,8 @@ Every lab can be done on its own, in any order. Each one ships a proof, a **cost
 labs/        one folder per lab: README (template below), Makefile, infra, proof
 platform/    reusable pieces labs graduate into (IaC modules, GitOps config)
 apps/        the workloads: catalog-api, site, triage-agent
-tools/       reaper, cost report, load tests
-kb/          knowledge base (an Obsidian vault): research, trend radar, session notes
+tools/       reaper, cost report, load tests, kb-check
+kb/          small cross-lab knowledge base (≤ 8 files): how it runs, trend radar, research
 templates/   the one lab README template
 ```
 

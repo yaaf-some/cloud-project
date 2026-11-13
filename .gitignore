@@ -27,3 +27,7 @@ credentials*
 
 # Load-test and proof scratch
 labs/**/proof/tmp/
+.obsidian/appearance.json
+.obsidian/graph.json
+.obsidian/plugins/
+*.canvas
