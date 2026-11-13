@@ -1,0 +1,5 @@
+{ "items": [
+  { "type": "file", "ctime": 1794600000000, "path": "kb/index.md", "title": "Start here" },
+  { "type": "file", "ctime": 1794600000001, "path": "kb/how-this-works.md", "title": "How this works" },
+  { "type": "file", "ctime": 1794600000002, "path": "README.md", "title": "Repo README" }
+] }

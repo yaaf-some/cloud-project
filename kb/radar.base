@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.inFolder("kb/radar")
+    - file.name != "_radar-template"
+properties:
+  verdict:
+    displayName: Verdict
+  area:
+    displayName: Area
+  labs:
+    displayName: Affects labs
+  verified:
+    displayName: Verified in primary source
+  updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Radar
+    order:
+      - file.name
+      - verdict
+      - area
+      - labs
+      - verified
+      - updated
+    sort:
+      - property: updated
+        direction: DESC

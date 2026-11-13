@@ -1,0 +1,47 @@
+filters:
+  and:
+    - file.inFolder("labs")
+    - file.name == "README"
+properties:
+  lab:
+    displayName: "#"
+  title:
+    displayName: Lab
+  status:
+    displayName: Status
+  effort:
+    displayName: Effort
+  cost_estimate:
+    displayName: Est. cost
+  cost_spent:
+    displayName: Spent ($)
+  roles:
+    displayName: Roles
+  linear:
+    displayName: Linear
+views:
+  - type: table
+    name: All labs
+    order:
+      - lab
+      - title
+      - status
+      - effort
+      - cost_estimate
+      - cost_spent
+      - roles
+      - linear
+    sort:
+      - property: lab
+        direction: ASC
+  - type: table
+    name: Now and next
+    filters:
+      or:
+        - status == "now"
+        - status == "next"
+    order:
+      - lab
+      - title
+      - status
+      - roles
