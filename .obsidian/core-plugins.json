@@ -12,5 +12,21 @@
   "command-palette": true,
   "bookmarks": true,
   "outline": true,
-  "file-recovery": true
+  "file-recovery": true,
+  "editor-status": true,
+  "word-count": true,
+  "canvas": false,
+  "bases": false,
+  "daily-notes": false,
+  "zk-prefixer": false,
+  "note-composer": false,
+  "random-note": false,
+  "footnotes": false,
+  "slash-command": false,
+  "slides": false,
+  "audio-recorder": false,
+  "workspaces": false,
+  "publish": false,
+  "sync": false,
+  "webviewer": false
 }
