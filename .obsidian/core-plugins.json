@@ -11,8 +11,6 @@
   "templates": true,
   "command-palette": true,
   "bookmarks": true,
-  "canvas": true,
-  "bases": true,
   "outline": true,
   "file-recovery": true
 }

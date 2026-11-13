@@ -21,11 +21,17 @@ You are working on **Runway** (see README.md). Yaaf owns it; you propose, he app
 1. Branch from `main` using the Linear issue's branch name (`gitBranchName`). Never push to `main`.
 2. Keep the change scoped to the issue. Anything else you notice becomes a new Linear issue with the `Idea` label.
 3. Before finishing:
-   - update the lab README (Proof, Cost receipt, Decisions, What broke) and its frontmatter `status`
-   - add a session note `kb/sessions/YYYY-MM-DD-<issue>-<slug>.md` covering what changed, what's next and open questions
-   - comment on the Linear issue with a summary and the PR link, and move it to the right state
+   - update the lab README (Proof, Cost receipt, Decisions, What broke) and its frontmatter `status`, and keep the root README lab table in sync
+   - run `python3 tools/kb-check.py` and fix what it reports
+   - hand off in a comment on the Linear issue: what changed, what's next, open questions, and the PR link. Then move the issue to the right state.
    - open a PR whose title includes the issue ID
 4. Never mark a lab ✅ without a working proof.
+
+## Knowledge-base rules (no wiki sprawl)
+- Lab knowledge goes in the lab's README. `kb/` is only for what spans several labs, with at most 8 files and 250 lines each.
+- Never create session, meeting or status notes in the repo. Those belong in Linear and the PR.
+- Replace instead of appending. Delete anything stale; git history is the archive.
+- Full rules: `kb/index.md`.
 
 ## Writing style
 Short sentences. Show results before process. No marketing words. Numbers beat adjectives.

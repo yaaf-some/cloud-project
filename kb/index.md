@@ -1,23 +1,26 @@
 ---
 title: Runway knowledge base
+updated: 2026-11-13
 ---
 
 # Runway knowledge base
 
-Start here. This folder is an [Obsidian](https://obsidian.md) vault (open the repo root as the vault), and it reads fine on GitHub too.
+Plain markdown. It reads the same on GitHub (web or the mobile app), in Obsidian, or in any editor. No paid sync and no plugins needed.
 
-## Labs dashboard
-![[labs.base]]
+## What's here (this is the whole list)
+- [how-this-works](how-this-works.md): the operating model. Board, sessions, scheduled tasks, cost guardrails.
+- [radar](radar.md): one table of trends and tools being watched, max 25 rows.
+- [research/2026-11-runway-report](research/2026-11-runway-report.md): the current foundation report.
 
-On GitHub, where the live dashboard doesn't render, use the table in the [root README](../README.md).
+The lab table is in the [root README](../README.md). Each lab's knowledge lives in its own `labs/NN-*/README.md`.
 
-## Map
-- [[how-this-works]]: the operating model. Linear board, Claude sessions, scheduled tasks, conventions.
-- `research/`: deep-research reports.
-  - [[2026-11-runway-report]]: the report Runway is built on (Nov 13, 2026).
-- `radar/`: one note per trend or tool, each marked watching / adopted / dropped. Template: [[_radar-template]].
-- `sessions/`: one handoff note per work session, newest last.
-- `../templates/lab-README.md`: the lab template.
+## Rules that keep this small
+Most wikis fail by accumulating, Confluence-style. These rules are checked by `tools/kb-check.py`, which the weekly board-health task runs:
 
-## Radar
-![[radar.base]]
+1. **Knowledge lives next to what it describes.** Anything about a lab goes in that lab's README. `kb/` holds only what spans several labs.
+2. **Hard budget:** at most 8 files in `kb/` and 250 lines per file.
+3. **Every `kb/` file is linked from this page.** Unlinked files get deleted.
+4. **One radar table, at most 25 rows.** Adopted items move into a lab README. Dropped items are deleted.
+5. **Replace, don't append.** A new research report replaces the old one. Git history is the archive.
+6. **No session, meeting or status notes in the repo.** Handoffs go in the Linear issue comment and the PR description; they close with the issue.
+7. **Delete freely.** Nothing is lost: `git log` keeps everything.
