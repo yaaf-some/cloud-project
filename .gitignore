@@ -1,0 +1,29 @@
+# OS / editors
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Obsidian: commit shared config, ignore per-device state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Terraform / OpenTofu
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+.terraform.lock.hcl.bak
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+credentials*
+
+# Load-test and proof scratch
+labs/**/proof/tmp/
