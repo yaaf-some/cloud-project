@@ -19,7 +19,7 @@ Nobody knows what the AWS account costs, keys live in laptops, and nothing can b
 ## What I built
 _Planned:_
 - AWS Budgets at $5 / $15 / $30 + Cost Anomaly Detection (YAA-9)
-- IAM Identity Center user; no long-lived keys (YAA-10)
+- Non-root IAM admin user with MFA, signed in with `aws login`; no long-lived keys (YAA-10)
 - GitHub OIDC → AWS role scoped to `main` (YAA-11)
 - Remote state bucket, required tags, Terraform vs OpenTofu pick (YAA-12)
 - `make nuke` + nightly reaper workflow (YAA-13)
@@ -31,7 +31,7 @@ _Planned:_
 | — | — | — |
 
 ## Decisions
-_None yet._
+**Why not IAM Identity Center?** It grants access to AWS accounts only through an organization instance, and an account instance rejects permission sets. One account does not need an organization. An IAM user with MFA and `aws login` gives short-lived credentials without one.
 
 ## What broke
 _Nothing yet._
