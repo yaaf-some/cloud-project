@@ -39,7 +39,7 @@ for p in kb_files:
     rel = p.relative_to(kb).as_posix()
     if rel == "index.md":
         continue
-    if rel not in index and p.stem not in index:
+    if rel not in index and p.name not in index:
         problems.append(f"kb/{rel} is not linked from kb/index.md. Link it or delete it.")
 
 radar = kb / "radar.md"
